@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "Kumbh Sans";
+    src: url("../fonts/inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+    /* min weight: 100, max: 900 */
+}
+html, body{
+    min-height: 100%;
+    min-width: 100%;
+}
+body{
+    font-family: "Kumbh Sans", sans-serif;
+}
+img{
+    max-width: 100%;
+}

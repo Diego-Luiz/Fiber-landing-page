@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Diego Luiz">
+    <meta name="creator" content="Diego Luiz">
+    <meta name="keywords" content="landing page, responsive, mobile first, fiber, codewell challenge, html, css, javascript, js">
+    <meta name="description" content="A responsive, mobile first landing page built named Fiber, built with HTML, CSS and Javascript according to Codewell challenge">
+    <title>Responsive landing page with mobile first workflow using HTML CSS and JS</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="top-header">
+        <h1 class="Logo">Fiber</h1>
+        <button class="nav-btn default-btn">
+            <span class="sr-only">Menu</span>
+            <span class="icon icon-menu" aria-hidden="true" aria-controls="main-nav" aria-live="true"></span>
+        </button>
+        <nav class="navbar" aria-label="Main menu" id="main-nav" aria-polite="assertive">
+            <ul>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#" class="default-btn">Sing In</a></li>
+                <li><a href="#" class="default-btn">Sing Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div role="banner" class="hero">
+        <img src="assets/hero-Illustration.png" alt="" role="presentation">
+        <section class="hero__introduction">
+            <h2 class="hero__introduction___title">Create your portfolio in minutes</h2>
+            <p class="hero__introduction___content">
+                With Fiber, you can setup your own personal portfolio in minutes
+                with dozens of premade, beatiful templates.
+            </p>
+            <a href="#" class="default-btn">Start Free Trial</a>
+            <a href="#">View Examples</a>
+            <p class="hero__introduction___advantages">
+                <span class="icon icon-checkmark" aria-hidden="true"></span>
+                No Credit Card Required
+            </p>
+            <p class="hero__introduction___advantages">
+                <span class="icon icon-checkmark" aria-hidden="true"></span>
+                10 Free templates
+            </p>
+        </section>
+    </div>
+    <main>
+        <section class="advantage-section">
+            <h2 class="advantage-section__question">Why Fiber?</h2>
+            <p class="advantage-section__reason">A good portfolio means good employability</p>
+            <section class="advantage-box">
+                <span class="icon icon-clock" aria-hidden="true"></span>
+                <h3 class="advantage-box__title">Build in minutes</h3>
+                <p class="advantage-box__content">
+                    With a selection of premade templates, you can build out
+                    a portfolio in less than 10 minutes.
+                </p>
+            </section>
+            <section class="advantage-box">
+                <span class="icon icon-clock" aria-hidden="true"></span>
+                <h3 class="advantage-box__title">Add custom <abbr title="Cascading style sheets">CSS</abbr></h3>
+                <p class="advantage-box__content">
+                    Customize your personal portfolio even more with the ability
+                    to add yout custom <abbr title="Cascading style sheets">CSS</abbr> styles.
+                </p>
+            </section>
+            <section class="advantage-box">
+                <span class="icon icon-clock" aria-hidden="true"></span>
+                <h3 class="advantage-box__title">Responsive</h3>
+                <p class="advantage-box__content">
+                    All Fiber templates are fully responsive to ensure the experience is 
+                    seemless across all devices.
+                </p>
+            </section>
+        </section>
+
+        <section class="advantage-section">
+            <div>
+                <h2 class="advantage-section__reason">Diversify your portfolio</h2>
+                <p class="advantage-section__content">
+                    Create an even more impressive portfolio by creating
+                    case studies for your project. Simply follow our 
+                    step<span aria-hidden="true">-</span>by<span aria-hidden="true">-</span>step guide.
+                </p>
+                <a href="#" class="default-btn">Start Free Trial</a>
+            </div>
+            <div class="advantage-section__illustration"></div>
+        </section>
+
+        <section class="testimonials-section" aria-label="Testimonials">
+            <article class="testimonial-card">
+                <header class="testimonial-card__header">
+                    <img src="" alt="" role="presentation" class="testimonial-card__user-img">
+                    <h3 class="testimonial-card__user-name">Sarah Andrews</h3>
+                    <p class="testimonial-card__user-gains">
+                        <span aria-hidden="true">$100k</span>
+                        <span class="sr-only">A hundred thousand dollars</span>
+                        in revenue
+                    </p>
+                </header>
+                <p class="testimonial-card__content">
+                    Setting up my portfolio with Fiber took no more than
+                    10 minutes. Since then, my portfolio has attracted a lot
+                    of clients and made me more than 
+                    <span aria-hidden="true">$100k</span>
+                    <span class="sr-only">A hundred thousand dollars</span>
+                    .
+                </p>
+                <a href="#" class="default-btn testimonial-card-btn">View Sarah's Portfolio</a>
+            </article>
+            <article class="testimonial-card">
+                <header class="testimonial-card__header">
+                    <img src="" alt="" role="presentation" class="testimonial-card__user-img">
+                    <h3 class="testimonial-card__user-name">Mathew Higgins</h3>
+                    <p class="testimonial-card__user-gains">
+                        <span aria-hidden="true">$20k</span>
+                        <span class="sr-only">A twenty thousand dollars</span>
+                        in revenue
+                    </p>
+                </header>
+                <p class="testimonial-card__content">
+                    I have been getting <span class="text-upper">a lot</span> of leads ever
+                    since I used Fiber's premade templates, now I just need to work on
+                    my case studes and I<abbr title="will">'ll</abbr> be ready to go!
+                </p>
+                <a href="#" class="default-btn testimonial-card-btn">View Mathew's Portfolio</a>
+            </article>
+            <article class="testimonial-card">
+                <header class="testimonial-card__header">
+                    <img src="" alt="" role="presentation" class="testimonial-card__user-img">
+                    <h3 class="testimonial-card__user-name">Janice Dave</h3>
+                    <p class="testimonial-card__user-gains">
+                        <span aria-hidden="true">$30k</span>
+                        <span class="sr-only">A thirty thousand dollars</span>
+                        in revenue
+                    </p>
+                </header>
+                <p class="testimonial-card__content">
+                    I only just started freelancing this year and I have already
+                    made more than I ever made in my full<span aria-hidden="true">-</span>time job.
+                    The templates are just so amazing.
+                </p>
+                <a href="#" class="default-btn testimonial-card-btn">View Janice's Portfolio</a>
+            </article>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <section class="main-footer__section">
+            <h2 class="main-footer__section___title">Fiber</h2>
+            <p class="main-footer__section___content">
+                With Fiber, you can setup your own personal portfolio in minutes with
+                dozens of premade, beatiful templates.
+                Made with <span class="sr-only">love</span> <span class="icon icon-heart" aria-hidden="true"></span>
+                in the Netherlands.
+            </p>
+        </section>
+        <section class="main-footer__section">
+            <h2 class="main-footer__section___title">Sitemap</h2>
+            <nav class="main-footer__nav" aria-label="Site menu navigation">
+                <ul>
+                    <li><a href="#">Homepage</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Features</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="main-footer__section">
+            <h2 class="main-footer__section___title">Resources</h2>
+            <nav class="main-footer__nav" aria-label="Resources menu navigation">
+                <ul>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <a href="#">
+                            <abbr title="Frequent asked questions">FAQ</abbr>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="main-footer__section">
+            <h2 class="main-footer__section___title">Company</h2>
+            <nav class="main-footer__nav" aria-label="Company menu navigation">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="main-footer__section">
+            <h2 class="main-footer__section___title">Portfolios</h2>
+            <nav class="main-footer__nav" aria-label="Portfolios menu navigation">
+                <ul>
+                    <li><a href="#">Sarah Andrews</a></li>
+                    <li><a href="#">Mathew Higgins</a></li>
+                    <li><a href="#">Janice Dave</a></li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+</body>
+</html>
