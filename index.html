@@ -14,82 +14,92 @@
 </head>
 <body>
     <header class="top-header">
-        <h1 class="Logo">Fiber</h1>
-        <button class="nav-btn default-btn">
-            <span class="sr-only">Menu</span>
-            <span class="icon icon-menu" aria-hidden="true" aria-controls="main-nav" aria-live="true"></span>
-        </button>
-        <nav class="navbar" aria-label="Main menu" id="main-nav" aria-polite="assertive">
-            <ul>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#" class="default-btn">Sing In</a></li>
-                <li><a href="#" class="default-btn">Sing Up</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html">Fiber</a>
+            </h1>
+            <button class="nav-btn default-btn" aria-controls="main-nav" aria-live="true">
+                <span class="sr-only">Menu</span>
+                <span class="icon icon-menu" aria-hidden="true"></span>
+            </button>
+            <nav class="navbar" aria-label="Main menu" id="main-nav" aria-polite="assertive">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="#">Community</a></li>
+                    <li class="navbar__item"><a href="#">Pricing</a></li>
+                    <li class="navbar__item"><a href="#">Features</a></li>
+                    <li class="navbar__item"><a href="#" class="default-btn">Sing In</a></li>
+                    <li class="navbar__item"><a href="#" class="default-btn --bg-blue">Sing Up</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <div role="banner" class="hero">
-        <img src="assets/hero-Illustration.png" alt="" role="presentation">
-        <section class="hero__introduction">
-            <h2 class="hero__introduction___title">Create your portfolio in minutes</h2>
-            <p class="hero__introduction___content">
-                With Fiber, you can setup your own personal portfolio in minutes
-                with dozens of premade, beatiful templates.
-            </p>
-            <a href="#" class="default-btn">Start Free Trial</a>
-            <a href="#">View Examples</a>
-            <p class="hero__introduction___advantages">
-                <span class="icon icon-checkmark" aria-hidden="true"></span>
-                No Credit Card Required
-            </p>
-            <p class="hero__introduction___advantages">
-                <span class="icon icon-checkmark" aria-hidden="true"></span>
-                10 Free templates
-            </p>
-        </section>
+        <div class="container">
+            <img src="assets/hero-Illustration.png" alt="" role="presentation" class="hero__illustration">
+            <section class="hero__introduction">
+                <h2 class="hero__introduction___title">Create your portfolio in minutes.</h2>
+                <p class="hero__introduction___content">
+                    With Fiber, you can setup your own personal portfolio in minutes
+                    with dozens of premade, beatiful templates.
+                </p>
+                <a href="#" class="default-btn --bg-blue">Start Free Trial</a>
+                <a href="#" class="default-link">View Examples</a>
+                <p class="hero__introduction___advantages">
+                    <span class="icon icon-checkmark" aria-hidden="true"></span>
+                    No Credit Card Required
+                </p>
+                <p class="hero__introduction___advantages">
+                    <span class="icon icon-checkmark" aria-hidden="true"></span>
+                    10 Free templates
+                </p>
+            </section>
+        </div>
     </div>
     <main>
         <section class="advantage-section">
-            <h2 class="advantage-section__question">Why Fiber?</h2>
-            <p class="advantage-section__reason">A good portfolio means good employability</p>
-            <section class="advantage-box">
-                <span class="icon icon-clock" aria-hidden="true"></span>
-                <h3 class="advantage-box__title">Build in minutes</h3>
-                <p class="advantage-box__content">
-                    With a selection of premade templates, you can build out
-                    a portfolio in less than 10 minutes.
-                </p>
-            </section>
-            <section class="advantage-box">
-                <span class="icon icon-clock" aria-hidden="true"></span>
-                <h3 class="advantage-box__title">Add custom <abbr title="Cascading style sheets">CSS</abbr></h3>
-                <p class="advantage-box__content">
-                    Customize your personal portfolio even more with the ability
-                    to add yout custom <abbr title="Cascading style sheets">CSS</abbr> styles.
-                </p>
-            </section>
-            <section class="advantage-box">
-                <span class="icon icon-clock" aria-hidden="true"></span>
-                <h3 class="advantage-box__title">Responsive</h3>
-                <p class="advantage-box__content">
-                    All Fiber templates are fully responsive to ensure the experience is 
-                    seemless across all devices.
-                </p>
-            </section>
+            <div class="container">
+                <h2 class="advantage-section__question">Why Fiber?</h2>
+                <p class="advantage-section__reason">A good portfolio means good employability.</p>
+                <section class="advantage-box">
+                    <span class="icon icon-clock" aria-hidden="true"></span>
+                    <h3 class="advantage-box__title">Build in minutes</h3>
+                    <p class="advantage-box__content">
+                        With a selection of premade templates, you can build out
+                        a portfolio in less than 10 minutes.
+                    </p>
+                </section>
+                <section class="advantage-box">
+                    <span class="icon icon-code" aria-hidden="true"></span>
+                    <h3 class="advantage-box__title">Add custom <abbr title="Cascading style sheets">CSS</abbr></h3>
+                    <p class="advantage-box__content">
+                        Customize your personal portfolio even more with the ability
+                        to add yout custom <abbr title="Cascading style sheets">CSS</abbr> styles.
+                    </p>
+                </section>
+                <section class="advantage-box">
+                    <span class="icon icon-responsive" aria-hidden="true"></span>
+                    <h3 class="advantage-box__title">Responsive</h3>
+                    <p class="advantage-box__content">
+                        All Fiber templates are fully responsive to ensure the experience is 
+                        seemless across all devices.
+                    </p>
+                </section>
+            </div>
         </section>
 
-        <section class="advantage-section">
-            <div>
-                <h2 class="advantage-section__reason">Diversify your portfolio</h2>
-                <p class="advantage-section__content">
-                    Create an even more impressive portfolio by creating
-                    case studies for your project. Simply follow our 
-                    step<span aria-hidden="true">-</span>by<span aria-hidden="true">-</span>step guide.
-                </p>
-                <a href="#" class="default-btn">Start Free Trial</a>
+        <section class="advantage-section --bg-blue">
+            <div class="container">
+                <div class="advantage-section__about-porfolio">
+                    <h2 class="advantage-section__reason">Diversify your portfolio</h2>
+                    <p class="advantage-section__content">
+                        Create an even more impressive portfolio by creating
+                        case studies for your project. Simply follow our 
+                        step<span aria-hidden="true">-</span>by<span aria-hidden="true">-</span>step guide.
+                    </p>
+                    <a href="#" class="default-btn --bg-white">Start Free Trial</a>
+                </div>
+                <div class="advantage-section__illustration"></div>
             </div>
-            <div class="advantage-section__illustration"></div>
         </section>
 
         <section class="testimonials-section" aria-label="Testimonials">
@@ -155,7 +165,7 @@
             <p class="main-footer__section___content">
                 With Fiber, you can setup your own personal portfolio in minutes with
                 dozens of premade, beatiful templates.
-                Made with <span class="sr-only">love</span> <span class="icon icon-heart" aria-hidden="true"></span>
+                Made with <span class="sr-only">love</span> <span aria-hidden="true">&#10084;</span>
                 in the Netherlands.
             </p>
         </section>
