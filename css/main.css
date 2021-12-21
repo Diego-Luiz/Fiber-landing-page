@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
 .hero__introduction___advantages .icon{ margin-right: .5em; }
 .advantage-section{ margin-top: 3.5em; }
 .advantage-section .container,
-.porfolio-example .container,
+.portfolio-example .container,
 .advantage-section__about-porfolio{
     display: flex;
     flex-direction: column;
@@ -185,33 +185,33 @@ h1, h2, h3, h4, h5, h6, p, ul{
     line-height: 1.5;
     color: var(--matte-black);
 }
-.porfolio-example{ margin: 3em 0; }
-.porfolio-example .container{ 
+.portfolio-example{ margin: 3em 0; }
+.portfolio-example .container{ 
     padding-top: 1.5em;
     background-color: var(--blue-clr); 
     border-radius: 10px;
 }
-.porfolio-example__description{ padding: 1.5em 2em; }
-.porfolio-example__description___title{ 
+.portfolio-example__description{ padding: 1.5em 2em; }
+.portfolio-example__description___title{ 
     font-size: 2.15rem; 
     max-width: 100%;
     word-wrap: break-word;
 }
-.porfolio-example__description__content{ margin: .75em 0; }
-.porfolio-example__description___title,
-.porfolio-example__description__content{ 
+.portfolio-example__description__content{ margin: .75em 0; }
+.portfolio-example__description___title,
+.portfolio-example__description__content{ 
     color: white; 
 }
-.porfolio-example__description .default-btn{
+.portfolio-example__description .default-btn{
     width: 100%;
     box-sizing: border-box;
     font-weight: 700;
 }
-.porfolio-example__illustration{
+.portfolio-example__illustration{
     padding: 1.5em 2em 0;
     height: 400px;
 }
-.porfolio-example__illustration img{
+.portfolio-example__illustration img{
     object-fit: cover;
     object-position: center;
     height: 100%;
