@@ -17,7 +17,7 @@ html, body{
 }
 body{ font-family: "Kumbh Sans", sans-serif; }
 body.container{ padding: 1.75em 0; }
-img{ max-width: 100%; }
+/* img{ max-width: 100%; } */
 button{ cursor: pointer; }
 h1, h2, h3, h4, h5, h6, p, ul{
     margin: 0;
@@ -33,6 +33,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 .default-link{
     display: inline-block;
+    height: max-content;
     padding: 1em;
     color: var(--blue-clr);
     font-weight: 700;
@@ -40,6 +41,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
 .default-btn{
     position: relative;
     display: inline-block;
+    height: max-content;
     cursor: pointer;
     background-color: transparent;
     color: black;
@@ -81,6 +83,9 @@ h1, h2, h3, h4, h5, h6, p, ul{
     align-items: center;
     padding: 2em 0 0;
     overflow: visible;
+}
+.logo{
+    width: max-content;
 }
 .logo a{
     display: flex;
@@ -125,9 +130,16 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 .navbar__item .default-btn{ font-weight: bold; }
 
+.hero .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .hero__illustration{
     position: relative;
     top: -1.5em;
+    width: 100%;
+    max-width: 614px;
 }
 .hero__introduction{
     display: flex;
@@ -146,8 +158,16 @@ h1, h2, h3, h4, h5, h6, p, ul{
 .hero__introduction .default-link{ text-align: center; }
 .hero__introduction___advantages{
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.hero__introduction___advantages p{ 
+    display: flex;
     align-items: center;
+    width: max-content;
     margin-bottom: 1em;
+    color: var(--matte-black);
 }
 .hero__introduction___advantages .icon{ margin-right: .5em; }
 .advantage-section{ margin-top: 3.5em; }
@@ -189,13 +209,18 @@ h1, h2, h3, h4, h5, h6, p, ul{
     background-color: var(--blue-clr); 
     border-radius: 10px;
 }
-.portfolio-example__description{ padding: 1.5em 2em; }
+.portfolio-example__description{ 
+    padding: 1.5em 2em; 
+}
 .portfolio-example__description___title{ 
     font-size: 2.15rem; 
     max-width: 100%;
     word-wrap: break-word;
 }
-.portfolio-example__description__content{ margin: .75em 0; }
+.portfolio-example__description__content{ 
+    margin: .75em 0; 
+    line-height: 1.5;
+}
 .portfolio-example__description___title,
 .portfolio-example__description__content{ 
     color: white; 
@@ -205,19 +230,29 @@ h1, h2, h3, h4, h5, h6, p, ul{
     box-sizing: border-box;
     font-weight: 700;
 }
-.portfolio-example__illustration{
-    padding: 1.5em 2em 0;
-    height: 400px;
+.portfolio-example__illustration{ 
+    padding: 1.5em 2em 0; 
+    overflow: hidden;
 }
 .portfolio-example__illustration img{
-    object-fit: cover;
-    object-position: center;
-    height: 100%;
+    position: relative;
+    bottom: -4px;
+    width: 100%;
     border-radius: 5px 5px 0 0;
 }
 
 .testimonials-section{ padding: 2em 0 3.5em; }
+.testimonials-section .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .testimonial-card{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    min-height: 248px;
+    flex-shrink: 0;
     border: solid 1px var(--gray-clr);
     padding: 1.5em;
     border-radius: 5px;
@@ -243,11 +278,17 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 .testimonial-card-btn{
     width: 100%;
+    margin-top: auto;
     font-weight: 700;
     box-sizing: border-box;
 }
 
 .main-footer{ padding: 3em 0; }
+.main-footer .container{
+    display: flex;
+    flex-direction: column;
+}
+.main-footer__section{ min-width: 150px;}
 .main-footer__section:not(:last-child){ margin-bottom: 1.5em; }
 .main-footer__section___title{ 
     padding: .5em 0;
@@ -258,7 +299,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
     line-height: 1.5;
     color: var(--matte-black);
 }
-.main-footer__section___content br{ margin-bottom: .25em; }
+.main-footer__section___content:last-child{ margin-top: 1em; }
 .main-footer__list{ list-style: none; }
 .main-footer__list-item{
     display: inline-block;
@@ -378,4 +419,117 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 .password-btn.--active svg{
     fill: var(--blue-clr);
+}
+
+.classification{ 
+    display: none; 
+    margin-bottom: 1em;
+}
+.classification__stars{
+    display: inline-block;
+    background: url(../assets/star.svg) space;
+    width: 100px;
+    margin-right: 1em;
+}
+
+@media screen and (min-width: 576px){
+    :root{
+        --content-width: 75%;
+    }
+}
+@media screen and (min-width: 768px){
+    :root{ --content-width: 80%; }
+    .default-btn:not(.testimonial-card .default-btn){ max-width: 200px; }
+    .hero__introduction{ flex-flow: row wrap; }
+    .hero__introduction .default-link{ margin-left: 1em; }
+    .hero__introduction___advantages{ 
+        flex-direction: row;
+        margin-top: 1em; 
+    }
+    .hero__introduction___advantages p:not(:first-child){ margin-left: 1em; }
+    .testimonials-section .container{
+        flex-direction: row;
+        align-items: flex-start;
+        padding-bottom: 2em;
+        overflow-x: scroll;
+    }
+    .testimonials-section .testimonial-card{
+        margin: 0;
+    }
+    .testimonial-card:not(:last-child){
+        margin-right: 2em;
+    }
+    .main-footer .container{
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+}
+@media screen and (min-width: 992px){
+    .top-header .container{
+        flex-wrap: nowrap;
+        padding: 0;
+    }
+    .navbar{ 
+        display: inline-block; 
+        flex-grow: 1;
+        width: auto;
+        background: transparent;
+    }
+    .nav-btn{ display: none;}
+    .navbar__list{ display: flex; }
+    .navbar__list .ml-auto{ margin-left: auto; }
+    .hero .container,
+    .portfolio-example .container{
+        display: grid;
+    }
+    .hero .container{ 
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3em 0; 
+    }
+    .hero__introduction{ 
+        grid-column: 1;
+        display: block;
+        padding: 0;
+    }
+    .hero__illustration{ 
+        grid-column: 2;
+        position: static;
+        width: 110%;
+        max-width: 120%;
+    }
+    .hero__introduction,
+    .hero__illustration{
+        grid-row: 1;
+    }
+    .hero__introduction___title,
+    .hero__introduction___content{
+        height: max-content;
+    }
+    .hero__introduction___advantages{
+        margin-top: 1.5em;
+    }
+    .classification{ display: flex; }
+    .advantage-section .container{
+        align-items: flex-start;
+    }
+    .advantage-section__reason{ 
+        max-width: 60%;
+    }
+    .advantage-section__list{
+        display: flex;
+        justify-content: space-between;
+    }
+    .advantage-section__list-item{ max-width: 30%; }
+    .portfolio-example .container{
+        grid-template-columns: 40% 60%;
+    }
+    .main-footer .container{
+        justify-content: center;
+    }
+    .main-footer__section:first-child{
+        width: 22%;
+        padding-right: 1em;
+        box-sizing: border-box;
+    }
+    .main-footer__section:not(:first-child){ width: 10%; }
 }
