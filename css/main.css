@@ -15,12 +15,10 @@ html, body{
     min-height: 100%;
     min-width: 100%;
 }
-body{
-    font-family: "Kumbh Sans", sans-serif;
-}
-img{
-    max-width: 100%;
-}
+body{ font-family: "Kumbh Sans", sans-serif; }
+body.container{ padding: 1.75em 0; }
+img{ max-width: 100%; }
+button{ cursor: pointer; }
 h1, h2, h3, h4, h5, h6, p, ul{
     margin: 0;
     padding: 0;
@@ -99,10 +97,10 @@ h1, h2, h3, h4, h5, h6, p, ul{
     background-color: transparent;
 }
 .navbar{
-    display: none;
+    /* display: none; */
     width: 100%;
-    max-height: 1px;
-    opacity: 0;
+    /* max-height: 1px; */
+    /* opacity: 0; */
     margin-top: 1em;
     padding: 1em 0;
     background-color: hsl(29, 41%, 90%);
@@ -268,4 +266,116 @@ h1, h2, h3, h4, h5, h6, p, ul{
     text-decoration: none;
     font-size: .95rem; 
     color: var(--matte-black);
+}
+
+.singup-title{
+    margin: 1em 0;
+    font-size: 2.25rem;
+}
+.form label{
+    display: block;
+    margin: 2em 0 .5em;
+    font-weight: 600;
+    font-size: 1.02rem;
+}
+.form input{
+    display: block;
+    width: 100%;
+    padding: .75em;
+    box-sizing: border-box;
+    border: solid 1px var(--gray-clr);
+    border-radius: 5px;
+    color: var(--matte-black);
+}
+.form-terms-box{
+    display: flex;
+    margin-top: 2em;
+}
+.form-terms-box label{
+    display: inline-block;
+    margin: 0;
+    padding: 0 .5em 0 .75em;
+    line-height: 1.5rem;
+    font-weight: 400;
+    font-size: 1.03rem;
+}
+.styled-input{
+    --input-width: 17px;
+    --input-height: 17px;
+    position: relative;
+    height: max-content;
+}
+#form__terms{ 
+    width: var(--input-width);
+    height: var(--input-height);
+    opacity: 0; 
+}
+.styled-input__checkbox{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: -1;
+    display: inline-block;
+    width: var(--input-width);
+    height: var(--input-height);
+    background-color: transparent;
+    outline: solid 1px var(--gray-clr);
+    border-radius: 5px;
+}
+.styled-input__checkbox::before{
+    content: "";
+    position: absolute;
+    inset: 50%;
+    display: inline-block;
+    width: 65%;
+    height: 65%;
+    border-bottom: solid 3.5px transparent;
+    border-right: solid 3.5px transparent;
+    transform: translate(-50%, -60%) rotate(45deg);
+    background: transparent;
+    box-sizing: border-box;
+}
+#form__terms:checked + .styled-input__checkbox{ 
+    background-color: var(--blue-clr); 
+    outline-width: 2px; 
+}
+#form__terms:checked + .styled-input__checkbox::before{ border-color: white; }
+.form__terms___link{ 
+    color: var(--blue-clr); 
+    font-weight: 700;
+}
+.form .default-btn{
+    margin: 1.25em 0;
+    width: 100%;
+    font-weight: 700;
+}
+.form__hasAccount{
+    font-weight: 400;
+    text-align: center;
+}
+.form__hasAccount .link-signin{
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--blue-clr);
+}
+.form-password-box{
+    position: relative;
+}
+.password-btn{
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    right: 3%;
+    z-index: 2;
+    height: max-content;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+}
+.password-btn svg{
+    fill: #A9A9A9;
+    transition: fill .5s ease-in;
+}
+.password-btn.--active svg{
+    fill: var(--blue-clr);
 }
