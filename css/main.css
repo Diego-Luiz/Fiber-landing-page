@@ -16,8 +16,10 @@ html, body{
     min-width: 100%;
 }
 body{ font-family: "Kumbh Sans", sans-serif; }
-body.container{ padding: 1.75em 0; }
-/* img{ max-width: 100%; } */
+html.--h-100,
+body.--h-100{ 
+    height: 100%;
+}
 button{ cursor: pointer; }
 h1, h2, h3, h4, h5, h6, p, ul{
     margin: 0;
@@ -310,10 +312,18 @@ h1, h2, h3, h4, h5, h6, p, ul{
     color: var(--matte-black);
 }
 
+.form-container,
+.hero-container{
+    padding: 2.5em 1.5em;
+}
+.hero-container{
+    display: none;
+}
 .singup-title{
     margin: 1em 0;
     font-size: 2.25rem;
 }
+.form{ min-width: 208px; }
 .form label{
     display: block;
     margin: 2em 0 .5em;
@@ -400,9 +410,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
     text-decoration: none;
     color: var(--blue-clr);
 }
-.form-password-box{
-    position: relative;
-}
+.form-password-box{ position: relative; }
 .password-btn{
     position: absolute;
     top: 50%;
@@ -421,6 +429,48 @@ h1, h2, h3, h4, h5, h6, p, ul{
 .password-btn.--active svg{
     fill: var(--blue-clr);
 }
+.form-container{
+    max-width: 487px;
+    margin: 0 auto;
+}
+.singup-img,
+.singup-hero{
+    max-width: 600px;
+}
+.singup-img img{
+    max-width: 100%;
+}
+.singup-hero__title{
+    margin-top: .75em;
+    text-align: center;
+    font-size: 1.75rem;
+}
+.singup-hero__content{
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 300;
+    margin: .5em 0;
+}
+.singup-hero__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+.singup-hero__list li{
+    margin-right: .1em;
+    padding: 0 .2em;
+}
+.singup-hero__btn-section{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255);
+    opacity: .6;
+    transition: opacity 500ms ease-out;
+}
+.singup-hero__btn-section.--active{ opacity: 1; }
 
 .classification{ 
     display: none; 
@@ -433,14 +483,10 @@ h1, h2, h3, h4, h5, h6, p, ul{
     margin-right: 1em;
 }
 
-@media screen and (min-width: 576px){
-    :root{
-        --content-width: 75%;
-    }
-}
+@media screen and (min-width: 576px){ :root{ --content-width: 75%; } }
 @media screen and (min-width: 768px){
     :root{ --content-width: 80%; }
-    .default-btn:not(.testimonial-card .default-btn){ max-width: 200px; }
+    .default-btn:not(.testimonial-card .default-btn, .--w-100){ max-width: 200px; }
     .hero__introduction{ flex-flow: row wrap; }
     .hero__introduction .default-link{ margin-left: 1em; }
     .hero__introduction___advantages{ 
@@ -536,5 +582,30 @@ h1, h2, h3, h4, h5, h6, p, ul{
 @media screen and (min-width: 1200px){
     html{ font-size: 17px; }
     .portfolio-example__description{ padding: 0 0 0 2em; }
+    .singup-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 100%;
+        box-sizing: border-box;
+    }
+    .form-container,
+    .hero-container{
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .form-container{
+        margin: unset;
+        justify-self: center;
+        align-self: center;
+    }
+    .hero-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em 5em;
+        background-color: var(--blue-clr);
+        color: white;
+    }
 }
 @media screen and (min-width: 3000px){ html{ font-size: 20px; } }
