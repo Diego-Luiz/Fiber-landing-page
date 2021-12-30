@@ -7,7 +7,7 @@
     --gray-clr: hsl(0, 0%, 82%);
     --matte-black: hsl(0, 0%, 35%);
     --beige-clr: hsl(29, 41%, 96%);
-    --blue-clr: #3d3bd0;
+    --blue-clr: #3d3bd0; 
     --content-width: 85%; 
 }
 html{ scroll-behavior: smooth; }
@@ -79,6 +79,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
 }
 .top-header .container{
     position: relative;
+    z-index: 2;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -104,20 +105,23 @@ h1, h2, h3, h4, h5, h6, p, ul{
     background-color: transparent;
 }
 .navbar{
-    /* display: none; */
     width: 100%;
-    /* max-height: 1px; */
-    /* opacity: 0; */
     margin-top: 1em;
     padding: 1em 0;
     background-color: hsl(29, 41%, 90%);
     border-radius: 5px;
+}
+.js .navbar{
+    visibility: hidden;
+    padding: 0;
+    max-height: 1px;
     overflow: hidden;
-    transition: max-height, opacity 1s ease-in;
+    transition: max-height .2s ease-in-out;
 }
 .navbar.--active{
-    max-height: 100%;
-    opacity: 1;
+    visibility: visible;
+    padding: 1em 0;
+    max-height: 100vh;
 }
 .navbar__list{ 
     list-style: none; 
@@ -339,6 +343,7 @@ h1, h2, h3, h4, h5, h6, p, ul{
     border-radius: 5px;
     color: var(--matte-black);
 }
+.form input[aria-invalid="true"]{ border-color: red; }
 .form-terms-box{
     display: flex;
     margin-top: 2em;
@@ -433,12 +438,14 @@ h1, h2, h3, h4, h5, h6, p, ul{
     max-width: 487px;
     margin: 0 auto;
 }
-.singup-img,
+.singup-img-box,
 .singup-hero{
+    min-width: 430px;
     max-width: 600px;
 }
-.singup-img img{
-    max-width: 100%;
+.singup-img-box .src{
+    width: 100%;
+    flex-shrink: 0;
 }
 .singup-hero__title{
     margin-top: .75em;
@@ -482,7 +489,80 @@ h1, h2, h3, h4, h5, h6, p, ul{
     width: 100px;
     margin-right: 1em;
 }
+.error-box{
+    margin-top: .5em;
+    list-style-position: inside;
+    list-style-type: '\261B';
+    font-size: .75rem;
+    color: red;
+}
 
+.carousel{ overflow: hidden; }
+.carousel .slider{
+    display: flex;
+    max-width: 600px;
+}
+.carousel .slider:not(.--no-animation){ transition: transform .5s ease-in; }
+
+@media (hover:hover) and (pointer:fine){
+    .default-btn{ 
+        position: relative; 
+        transition: transform .2s ease-in;
+    }
+    .default-btn:not(.nav-btn)::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 0%;
+        height: 100%;
+        background-color: var(--blue-clr);
+        opacity: .2;
+        border-radius: 5px;
+        transition: width .1s ease-in;
+    }
+    .default-btn:not(.nav-btn):hover{ transform: scale(1.03); }
+    .default-btn:not(.nav-btn):hover::before{ width: 100%; }
+        
+    .navbar__item .link,
+    .main-footer__list-item,
+    .default-link{ 
+        position: relative;
+        text-decoration: none; 
+    }
+    .navbar__item .link::after,
+    .main-footer__list-item::after,
+    .default-link::after{
+        content: "";
+        position: absolute;    
+        display: inline-block;
+        width: 0%;
+        height: 2.5px;
+        background: currentColor;
+        transition: width .2s ease-in;
+    }
+    .navbar__item .link::after{
+        left: 1em;
+        bottom: .75em;
+    }
+    .main-footer__list-item::after{
+        left: 0%;
+        bottom: .55em;
+    }
+    .default-link::after{
+        left: 1em;
+        top: calc(100% - 1em);
+    }
+    .navbar__item .link:hover::after{
+        width: calc(100% - 2em);
+    }
+    .main-footer__list-item:hover::after{
+        width: calc(100% - .75em);
+    }
+    .default-link:hover::after{
+        width: calc(100% - 2em);
+    }
+}
 @media screen and (min-width: 576px){ :root{ --content-width: 75%; } }
 @media screen and (min-width: 768px){
     :root{ --content-width: 80%; }
@@ -590,11 +670,11 @@ h1, h2, h3, h4, h5, h6, p, ul{
     }
     .form-container,
     .hero-container{
-        padding: 0;
         box-sizing: border-box;
     }
     .form-container{
         margin: unset;
+        padding: 1.5em 0;
         justify-self: center;
         align-self: center;
     }

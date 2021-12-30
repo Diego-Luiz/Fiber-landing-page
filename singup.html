@@ -11,6 +11,7 @@
     <title>Responsive landing page with mobile first workflow using HTML CSS and JS</title>
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/singup.js" defer></script>
 </head>
 <body class="--h-100">
     <section class="singup-container" aria-label="sing up section">
@@ -21,13 +22,14 @@
             <h2 class="singup-title">Create your Fiber account</h2>
             <form action="" class="form" autocomplete>
                 <label for="form__name">Your Name</label>
-                <input type="text" id="form__name" placeholder="John Doe" required>
+                <input type="text" id="form__name" placeholder="John Doe" required minlength="3">
+                <ul role="log" class="error-box"></ul>
 
                 <label for="form__email">
                     E<span aria-hidden="true">-</span>mail
                 </label>
-                <input type="email" id="form__email" placeholder="john@example.com" required>
-                
+                <input type="email" id="form__email" placeholder="john@example.com" required minlength="3">
+                <ul role="log" class="error-box"></ul>
                 
                 <label for="form__password">Password</label>
                 <div class="form-password-box">
@@ -38,6 +40,7 @@
                         </svg>  
                     </button>
                 </div>
+                <ul role="log" class="error-box"></ul>
 
                 <div class="form-terms-box">
                     <div class="styled-input">
@@ -49,6 +52,8 @@
                         the <a href="#" class="form__terms___link">Terms & Conditions</a>.
                     </label>
                 </div>
+                <ul role="log" class="error-box"></ul>
+
                 <button type="submit" class="default-btn --w-100 --bg-blue">Create Fiber Account</button>
                 <p class="form__hasAccount">
                     Already have an account? <a href="#" class="link-signin">Sign in</a>
@@ -56,8 +61,13 @@
             </form>
         </section>
         <div class="hero-container">
-            <div class="singup-img">
-                <img src="assets/SignUpImage.png" alt="" role="presentation">
+            <div class="singup-img-box carousel">
+                <div class="slider">
+                    <img src="assets/SignUpImage.png" alt="" role="presentation" class="src">
+                    <img src="assets/PageImage.png" alt="" role="presentation" class="src">
+                    <img src="assets/SignUpImage.png" alt="" role="presentation" class="src">
+                    <img src="assets/PageImage.png" alt="" role="presentation" class="src">
+                </div>
             </div>
             <section class="singup-hero">
                 <h2 class="singup-hero__title">Unparalleled Templates</h2>
@@ -67,16 +77,16 @@
                 </p>
                 <ul class="singup-hero__list">
                     <li>
-                        <button class="singup-hero__btn-section" aria-label="About Fiber templates"></button>
+                        <button class="singup-hero__btn-section" aria-label="About Fiber templates" data-order="0"></button>
                     </li>
                     <li>
-                        <button class="singup-hero__btn-section" aria-label="About Fiber templates"></button>
+                        <button class="singup-hero__btn-section" aria-label="About Fiber templates" data-order="1"></button>
                     </li>
                     <li>
-                        <button class="singup-hero__btn-section" aria-label="About Fiber templates"></button>
+                        <button class="singup-hero__btn-section" aria-label="About Fiber templates" data-order="2"></button>
                     </li>
                     <li>
-                        <button class="singup-hero__btn-section" aria-label="About Fiber templates"></button>
+                        <button class="singup-hero__btn-section" aria-label="About Fiber templates" data-order="3"></button>
                     </li>
                 </ul>
             </section>
