@@ -8,7 +8,7 @@
     const images = document.querySelectorAll('.slider .src')
     const maxImagesIndex = images.length
     const SLIDERTIME = 4000
-    let autoSlider = setInterval(moveSlider, SLIDERTIME, "autorun")
+    const autoSlider = window.matchMedia(`(min-width: 1200px)`).matches ? setInterval(moveSlider, SLIDERTIME, "autorun") : undefined
     let index = 0
     let lastBtnIndexActive = 0
     form.addEventListener('submit', verifySubmission)
